@@ -1,0 +1,70 @@
+.stay-home {
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__content {
+    max-width: 470px;
+    padding-top: 55px;
+  }
+
+  &__title {
+    text-align: left;
+    font-size: 36px;
+  }
+
+  &__title,
+  &__items {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    opacity: 0.9;
+    margin-bottom: 35px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 64px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 34px;
+      height: 34px;
+      left: 0;
+    }
+
+    &--timer {
+      &::before {
+        background-image: url('../images/stay-home/timer.svg');
+      }
+    }
+
+    &--delivery {
+      &::before {
+        background-image: url('../images/stay-home/delivery.svg');
+      }
+    }
+
+    &--restaurant {
+      &::before {
+        background-image: url('../images/stay-home/restaurant.svg');
+      }
+    }
+  }
+
+  &__info {
+    font-size: 24px;
+  }
+
+
+}

@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "sys": {
+        "id": "1"
+      },
+      "fields": {
+        "title": "queen panel bed",
+        "price": 10.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "/app/images/burgers/black-burger.png"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "2"
+      },
+      "fields": {
+        "title": "king panel bed",
+        "price": 12.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "/app/images/burgers/Burger.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "3"
+      },
+      "fields": {
+        "title": "single panel bed",
+        "price": 12.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "/app/images/burgers/cheeseburger.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "4"
+      },
+      "fields": {
+        "title": "twin panel bed",
+        "price": 22.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "/app/images/burgers/chicken-burger.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "5"
+      },
+      "fields": {
+        "title": "fridge",
+        "price": 88.99,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "/app/images/burgers/royal-burger.jpg"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
