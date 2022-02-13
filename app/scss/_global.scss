@@ -33,6 +33,8 @@ body {
   border: none;
   background-color: transparent;
   padding: 0;
+  outline: transparent;
+  border-radius: 5px;
 }
 
 .logo {
@@ -55,7 +57,7 @@ body {
 }
 
 .section {
-  padding: 120px 0;
+  margin: 120px 0;
 }
 
 .title {
