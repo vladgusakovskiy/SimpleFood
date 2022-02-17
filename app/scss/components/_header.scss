@@ -1,0 +1,198 @@
+.header {
+  padding: 60px 0;
+
+  &__top {
+    display: flex;
+  }
+
+  &__logo {
+    margin-right: auto;
+  }
+}
+
+.menu {
+  display: flex;
+  margin-right: 115px;
+
+  &__list:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 1.4;
+    color: $dark;
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:hover {
+      color: $orange-900;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    }
+
+    &--current {
+      color: $orange-900;
+    }
+  }
+}
+
+.search-form {
+  position: relative;
+  bottom: 12px;
+  width: 0;
+  height: 55px;
+  line-height: 55px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+
+  &--active {
+    width: 250px;
+    padding-left: 25px;
+    transition: all 0.5s ease;
+  }
+
+  &__input {
+    border: 0;
+    background: transparent;
+    width: 0;
+    outline: none;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: italic;
+    transition: all 0.3s ease;
+
+    &--active {
+      width: 98%;
+      padding-left: 5px;
+      transition: all 0.5s 0.8s ease;
+    }
+
+    &::placeholder {
+      color: $darkBlue-900;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    display: block;
+    right: 30px;
+    top: 16px;
+    width: 30px;
+    height: 31px;
+    transition: background-color 0.8s, box-shadow 0.8s ease-in-out;
+
+    &:focus {
+      background-color: $seashell;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+
+      &::before {
+        background-color: $dark;
+      }
+    }
+
+    &:hover {
+      background-color: $orange-900;
+
+      &::before {
+        background-color: $white;
+        transition: background-color 0.8s, box-shadow 0.8s ease-in-out;
+      }
+    }
+
+    &:active {
+      background-color: $seashell;
+      box-shadow: none;
+
+      &::before {
+        background-color: $darkBlue-900;
+      }
+    }
+
+    &::before {
+      @include pseudo;
+      right: 6px;
+      bottom: 7px;
+      mask-image: url('../../images/icons/icon-search.svg');
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      background-color: $darkBlue-900;
+      width: 19px;
+      height: 19px;
+    }
+  }
+}
+
+.btn-cart {
+  position: relative;
+  bottom: 0;
+  width: 30px;
+  height: 31px;
+
+  &:focus {
+    background-color: $seashell;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+
+    &::before {
+      background-color: $dark;
+    }
+  }
+
+  &:hover {
+    background-color: $orange-900;
+
+    &::before {
+      background-color: $white;
+      transition: background-color 0.8s, box-shadow 0.8s ease-in-out;
+    }
+  }
+
+  &:active {
+    background-color: $seashell;
+    box-shadow: none;
+
+    &::before {
+      background-color: $orange-900;
+    }
+  }
+
+  &::before {
+    @include pseudo;
+    bottom: 4px;
+    right: 5px;
+    mask-image: url('../../images/icons/icon-cart.svg');
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    background-color: $darkBlue-900;
+    width: 19px;
+    height: 19px;
+  }
+
+  &__num {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    bottom: 15px;
+    right: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+    color: $white;
+    background-color: $orange-900;
+
+    &:hover {
+      background-color: $white;
+      color: $orange-900;
+    }
+  }
+}

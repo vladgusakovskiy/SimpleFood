@@ -1,0 +1,63 @@
+.mobile-app {
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 540px;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 1.3;
+    text-align: left;
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    opacity: 0.9;
+    margin-bottom: 66px;
+  }
+
+  &__items {
+    position: relative;
+  }
+
+  &__link {
+    @include pseudo;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40px;
+    bottom: -5px;
+
+    &--apple {
+      background-image: url('../../images/mobile-app/apple-store.svg');
+      width: 120px;
+    }
+
+    &--google {
+      background-image: url('../../images/mobile-app/google-play.svg');
+      width: 135px;
+      left: 150px;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+  }
+
+  &__img {
+    background-image: url('../../images/mobile-app/app.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 570px;
+    height: 380px;
+  }
+}
