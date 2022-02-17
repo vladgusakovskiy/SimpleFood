@@ -1,7 +1,7 @@
 .footer {
   &__inner {
     display: flex;
-    margin-bottom: 38px;
+    margin-bottom: 70px;
   }
 
   &__sub {
@@ -20,10 +20,9 @@
 
   &__input {
     max-width: 200px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     padding: 13px 15px;
     width: 100%;
-    height: 44px;
     font-size: 14px;
     border: 1px solid #C2C2C2;
     border-radius: 5px;
@@ -48,7 +47,7 @@
     line-height: 1.3;
     background-color: $orange-900;
     color: #fff;
-    @extend %Rubik-500;
+    font-weight: 500;
     transition: color 0.8s, background-color 0.8s, box-shadow 0.8s ease-in-out;
 
     &:focus {
@@ -98,12 +97,12 @@
 
   &__menu {
     column-count: 3;
-    margin-right: 50px;
+    margin-right: 40px;
   }
 
   &__item {
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
   }
 
@@ -111,6 +110,20 @@
     font-size: 18px;
     line-height: 1.3;
     letter-spacing: 0.01em;
+    transition: color 0.5s, box-shadow 0.8s ease-in-out;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:hover {
+      color: $orange-900;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    }
   }
 
   &__copy {
@@ -144,13 +157,27 @@
     padding-left: 31px;
 
     &:not(:last-child) {
-      margin-bottom: 11px;
+      margin-bottom: 16px;
     }
   }
 
   &__link {
     font-size: 16px;
     line-height: 2;
+    transition: color 0.5s, box-shadow 0.8s ease-in-out;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:hover {
+      color: $orange-900;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    }
   }
 
   &__icon {
@@ -187,41 +214,65 @@
     display: block;
     width: 39px;
     height: 39px;
-    transition: fill 0.7s, stroke 0.7s ease-in-out;
+    border-radius: 100%;
+    background-color: $silver-200;
+    transition: background-color 0.8s, box-shadow 0.8s ease-in-out;
+
+    &:focus {
+      background-color: $seashell;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+
+      &::before {
+        background-color: $dark;
+      }
+    }
+
+    &:hover {
+      background-color: $orange-900;
+
+      &::before {
+        background-color: $white;
+        transition: background-color 0.8s, box-shadow 0.8s ease-in-out;
+      }
+    }
+
+    &:active {
+      background-color: $seashell;
+      box-shadow: none;
+
+      &::before {
+        background-color: $orange-900;
+      }
+    }
 
     &::before {
       content: "";
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
       position: absolute;
+      right: 9px;
+      top: 9px;
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      mask-size: cover;
+      background-color: $dark;
+      width: 20px;
+      height: 20px;
     }
 
     &--fb {
       &::before {
-        width: 39px;
-        height: 39px;
-        background-image: url('../images/footer-icon/facebook.svg');
+        mask-image: url('../../images/sprite.svg#icon-facebook');
       }
     }
 
     &--tw {
       &::before {
-        width: 39px;
-        height: 39px;
-        background-image: url('../images/footer-icon/twitter.svg');
-      }
-
-      &:hover {
-        filter: invert(51%) sepia(80%) saturate(1972%) hue-rotate(337deg) brightness(103%) contrast(102%);
+        mask-image: url('../../images/sprite.svg#icon-twitter');
       }
     }
 
     &--insta {
       &::before {
-        width: 39px;
-        height: 39px;
-        background-image: url('../images/footer-icon/instagram.svg');
+        mask-image: url('../../images/sprite.svg#icon-instagram');
       }
     }
   }

@@ -1,12 +1,24 @@
 .stay-home {
+
   &__inner {
     display: flex;
     justify-content: space-around;
   }
 
+  &__food-delivery {
+    width: 440px;
+    height: 585px;
+    background-image: url('../../images/stay-home/food-delivery.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+  }
+
   &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 470px;
-    padding-top: 55px;
   }
 
   &__title {
@@ -21,7 +33,7 @@
 
   &__text {
     opacity: 0.9;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 
   &__item:not(:last-child) {
@@ -62,9 +74,11 @@
     }
   }
 
+  &__more {
+    align-self: flex-start;
+  }
+
   &__info {
     font-size: 24px;
   }
-
-
 }
