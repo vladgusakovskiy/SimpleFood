@@ -12,7 +12,7 @@
 
 .menu {
   display: flex;
-  margin-right: 115px;
+  margin-right: 98px;
 
   &__list:not(:last-child) {
     margin-right: 45px;
@@ -46,52 +46,50 @@
 .search-form {
   position: relative;
   bottom: 12px;
+  margin-right: 20px;
+  border-radius: 5px;
   width: 0;
   height: 55px;
   line-height: 55px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: $orange-900;
   transition: all 0.5s ease;
 
   &--active {
-    width: 250px;
-    padding-left: 25px;
+    width: 400px;
     transition: all 0.5s ease;
   }
 
   &__input {
     border: 0;
-    background: transparent;
     width: 0;
-    outline: none;
+    font-size: 14px;
     font-weight: 400;
-    font-size: 18px;
-    font-style: italic;
+    outline: transparent;
+    background-color: transparent;
     transition: all 0.3s ease;
 
     &--active {
-      width: 98%;
-      padding-left: 5px;
+      width: 70%;
+      padding-left: 15px;
       transition: all 0.5s 0.8s ease;
-    }
-
-    &::placeholder {
-      color: $darkBlue-900;
     }
   }
 
-  &__btn {
+  &__icon {
     position: absolute;
     display: block;
-    right: 30px;
-    top: 16px;
+    right: 10px;
+    top: 13px;
     width: 30px;
     height: 31px;
+    cursor: pointer;
     transition: background-color 0.8s, box-shadow 0.8s ease-in-out;
+    border-radius: 5px;
 
     &:focus {
       background-color: $seashell;
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
 
       &::before {
         background-color: $dark;
@@ -120,13 +118,32 @@
       @include pseudo;
       right: 6px;
       bottom: 7px;
+      width: 19px;
+      height: 19px;
       mask-image: url('../../images/icons/icon-search.svg');
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: cover;
       background-color: $darkBlue-900;
-      width: 19px;
-      height: 19px;
+    }
+  }
+
+  &__btn {
+    display: none;
+
+    &--active {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 30px;
+      font-size: 15px;
+      color: $white;
+      background-color: $dark;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
   }
 }
@@ -137,37 +154,10 @@
   width: 30px;
   height: 31px;
 
-  &:focus {
-    background-color: $seashell;
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-
-    &::before {
-      background-color: $dark;
-    }
-  }
-
-  &:hover {
-    background-color: $orange-900;
-
-    &::before {
-      background-color: $white;
-      transition: background-color 0.8s, box-shadow 0.8s ease-in-out;
-    }
-  }
-
-  &:active {
-    background-color: $seashell;
-    box-shadow: none;
-
-    &::before {
-      background-color: $orange-900;
-    }
-  }
-
   &::before {
     @include pseudo;
-    bottom: 4px;
-    right: 5px;
+    bottom: 8px;
+    right: 14px;
     mask-image: url('../../images/icons/icon-cart.svg');
     mask-position: center;
     mask-size: cover;
@@ -182,17 +172,53 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    bottom: 15px;
-    right: 0;
+    bottom: 17px;
+    right: 4px;
     font-size: 10px;
     line-height: 1.4;
     text-align: center;
     color: $white;
     background-color: $orange-900;
+  }
+}
 
-    &:hover {
+.button-cart {
+
+  &:focus {
+    background-color: $seashell;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+
+    &::before {
+      background-color: $dark;
+    }
+  }
+
+  &:hover {
+    background-color: $orange-900;
+
+    .btn-cart__num {
       background-color: $white;
       color: $orange-900;
+      transition: background-color 0.8s ease-in-out;
+    }
+
+    &::before {
+      background-color: $white;
+      transition: background-color 0.8s, box-shadow 0.8s ease-in-out;
+    }
+  }
+
+  &:active {
+    background-color: $seashell;
+    box-shadow: none;
+
+    .btn-cart__num {
+      background-color: $orange-900;
+      color: $white;
+    }
+
+    &::before {
+      background-color: $orange-900;
     }
   }
 }

@@ -43,6 +43,7 @@
   &__item {
     position: relative;
     padding-left: 64px;
+    font-size: 24px;
 
     &::before {
       content: "";
@@ -76,9 +77,5 @@
 
   &__more {
     align-self: flex-start;
-  }
-
-  &__info {
-    font-size: 24px;
   }
 }

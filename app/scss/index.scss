@@ -1,0 +1,13 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'mixins';
+@import '../module/_header/_header';
+@import '../module/_hero/_hero';
+@import '../module/_popular-categories/popular-categories';
+@import '../module/_stay-home/_stay-home';
+@import '../module/_best-restaurants/best-restaurants';
+@import '../module/_reviews/_reviews';
+@import '../module/_mobile-app/mobile-app';
+@import '../module/_footer/footer';

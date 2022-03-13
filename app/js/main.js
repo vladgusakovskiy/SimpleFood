@@ -22,22 +22,14 @@ $(function () {
     $('.swiper-button-prev-left, .swiper-button-next-right').removeClass('swiper-button-prev-left--active, swiper-button-next-right--active');
     $(this).addClass('swiper-button-prev-left--active, swiper-button-next-right--active');
   });
-});
 
-
-$(document).ready(function () {
-
-  $(".search-form__btn").click(function () {
+  $(".search-form__icon,.search-form__btn").on('click', function () {
     $(".search-form").toggleClass("search-form--active");
     $(".search-form__input").toggleClass("search-form__input--active");
-    $("input[type='text']").focus();
+    $(".search-form__btn").toggleClass("search-form__btn--active");
+    $("input[type='search']").on('focus');
   });
-
 });
-
-
-
-
 
 
 

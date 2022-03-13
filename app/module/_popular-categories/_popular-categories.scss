@@ -10,8 +10,10 @@
     margin-bottom: 45px;
   }
 
-  &__filter:not(:last-child) {
-    margin-right: 20px;
+  &__filter {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 
   &__filter {
