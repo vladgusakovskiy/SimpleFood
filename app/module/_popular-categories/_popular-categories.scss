@@ -224,3 +224,26 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+
+  .popular-categories {
+    &__filters {
+      overflow-x: auto;
+      white-space: nowrap;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+
+    &__filter {
+      margin: 5px;
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+
+}

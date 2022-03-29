@@ -4,30 +4,68 @@
       <a class="header__logo logo" href="#">
         <img class="logo__img" src="images/Logo.svg" width="200" height="39" alt="Логотип">
       </a>
-      <ul class="menu">
-        <li class="menu__list">
-          <a class="menu__link menu__link--current" href="#">
-            Главная
-          </a>
-        </li>
-        <li class="menu__list">
-          <a class="menu__link" href="#">
-            Блюда
-          </a>
-        </li>
-        <li class="menu__list">
-          <a class="menu__link" href="#">
-            Контакты
-          </a>
-        </li>
-      </ul>
+      <div class="header-content">
+        <button class="header-burger btn-reset" type="button" aria-label="Мобильное меню">
+          <span class="header-burger__line"></span>
+        </button>
+        <ul class="menu">
+          <li class="menu__list">
+            <a class="menu__link menu__link--current" href="#">
+              Главная
+            </a>
+          </li>
+          <li class="menu__list">
+            <a class="menu__link" href="#">
+              Блюда
+            </a>
+          </li>
+          <li class="menu__list">
+            <a class="menu__link" href="#">
+              Контакты
+            </a>
+          </li>
+        </ul>
+        <address class="header-info">
+          <ul class="address-info__items">
+            <li class="address-info__item">
+              <div class="address-info__icon address-info__icon--location"></div>
+              <a class="address-info__link" href="#">
+                ул. Смирнова 2/3
+              </a>
+            </li>
+            <li class="address-info__item">
+              <div class="address-info__icon address-info__icon--tel"></div>
+              <a class="address-info__link" href="tel:79068057043">
+                79068057043
+              </a>
+            </li>
+            <li class="address-info__item">
+              <div class="address-info__icon address-info__icon--message"></div>
+              <a class="address-info__link" href="mailto:support@sfood.com">
+                support@sfood.com
+              </a>
+            </li>
+          </ul>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link social__link--fb" aria-label="Ссылка на фейсбук" href="#"></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--tw" aria-label="Ссылка на твиттер" href="#"></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--insta" aria-label="Ссылка на инстаграм" href="#"></a>
+            </li>
+          </ul>
+        </address>
+      </div>
       <form class="search-form">
         <input class="search-form__input" type="text" name="search" aria-label="форма поиска по сайту">
         <span class="search-form__icon" tabindex="0"></span>
         <button class="search-form__btn btn-reset" type="button">Найти</button>
       </form>
       <button class="btn-cart btn-reset button-cart" type="button">
-        <span class="btn-cart__num button-cart">0</span>
+        <span class="btn-cart__num button-cart">4</span>
       </button>
     </nav>
   </div>

@@ -18,10 +18,21 @@ const swiper = new Swiper('.swiper', {
 
 
 $(function () {
+
+  $('.header-burger').on('click', function () {
+    $('.menu').toggleClass('menu--active');
+    $('.header-burger').toggleClass('header-burger--active');
+    $('.header-burger__line').toggleClass('header-burger__line--active');
+    $('.header-info').toggleClass('header-info--active');
+    $('body').toggleClass('lock');
+  });
+
+
   $('.swiper-button-prev-left, .swiper-button-next-right').on('click', function (e) {
     $('.swiper-button-prev-left, .swiper-button-next-right').removeClass('swiper-button-prev-left--active, swiper-button-next-right--active');
     $(this).addClass('swiper-button-prev-left--active, swiper-button-next-right--active');
   });
+
 
   $(".search-form__icon,.search-form__btn").on('click', function () {
     $(".search-form").toggleClass("search-form--active");
@@ -30,8 +41,6 @@ $(function () {
     $("input[type='search']").on('focus');
   });
 });
-
-
 
 // mixitup
 

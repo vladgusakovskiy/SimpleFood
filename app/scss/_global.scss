@@ -104,3 +104,17 @@ address {
     border-radius: 5px;
   }
 }
+
+/* ----------responsive mode--------------- */
+
+@media (max-width: 768px) {
+  .section {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    margin-bottom: 40px;
+  }
+}
